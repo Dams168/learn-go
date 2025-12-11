@@ -54,7 +54,8 @@ func main() {
 	// FizzBuzz(20)
 	// factorial(5)
 
-	arrayExample()
+	// arrayExample()
+	sliceExample()
 
 }
 
