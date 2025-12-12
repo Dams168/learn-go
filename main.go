@@ -55,7 +55,8 @@ func main() {
 	// factorial(5)
 
 	// arrayExample()
-	sliceExample()
+	// sliceExample()
+	mapExample()
 
 }
 
