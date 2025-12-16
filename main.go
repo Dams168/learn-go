@@ -56,8 +56,33 @@ func main() {
 
 	// arrayExample()
 	// sliceExample()
-	mapExample()
+	// mapExample()
 
+	// printMessage("Hello", []string{"Joshua", "Van", "de", "Marston"})
+
+	// fmt.Println(PersegiPanjang(2, 3))
+
+	// fmt.Println(averageNum(2, 4, 3, 6, 4, 5, 8, 9, 1))
+
+	// cara langsung
+	// var msg = fmt.Sprintf("Rata - rata : %.2f", averageNum(2, 3, 3, 5, 5, 4, 6, 8))
+	// fmt.Println(msg)
+
+	//gunakan slice untuk variadic
+	// numbers := []int{2, 3, 4, 6, 8, 9, 3, 1, 5, 6}
+
+	// var msg = fmt.Sprintf("Rata - rata : %.2f", averageNum(numbers...))
+	// fmt.Println(msg)
+	// var hobbies = []string{"Reading", "Writing", "Running"}
+	// introduce("John", hobbies...)
+
+	count1 := counter()
+	count2 := counter()
+
+	fmt.Println(count1())
+	fmt.Println(count2())
+	fmt.Println(count1())
+	fmt.Println(count2())
 }
 
 func FizzBuzz(point int) {
