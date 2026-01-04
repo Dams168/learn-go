@@ -4,86 +4,86 @@ import "fmt"
 
 // package i/o
 
-func main() {
+// func main() {
 
-	// Variable & Type Data
+// 	// Variable & Type Data
 
-	/*
+// 	/*
 
-		var <nama-variabel> <tipe-data>
-		var <nama-variabel> <tipe-data> = <nilai>
+// 		var <nama-variabel> <tipe-data>
+// 		var <nama-variabel> <tipe-data> = <nilai>
 
-		:= <nilai>
+// 		:= <nilai>
 
-		var firstName string = "john"
-		lastName := "Doe"
+// 		var firstName string = "john"
+// 		lastName := "Doe"
 
-		one, isFriday, twoPointTwo, say := 1, true, 2.2, "hello"
-		_ =  "wick"
+// 		one, isFriday, twoPointTwo, say := 1, true, 2.2, "hello"
+// 		_ =  "wick"
 
+// 		const (
+// 			pi = 3.14
+// 			e  = 2.71
+// 			isToday bool = false
+// 			numeric int8 = 42
+// 			num
+// 		)
 
+// 		fmt.Println("Hello", firstName, lastName + "!","!")
+// 		fmt.Println(one, isFriday, twoPointTwo, say)
+// 		fmt.Println(pi, e, isToday, numeric, num)
+// 	*/
 
-		const (
-			pi = 3.14
-			e  = 2.71
-			isToday bool = false
-			numeric int8 = 42
-			num
-		)
+// 	// array
+// 	// var names [4]string
+// 	// names[0] = "trafalgar"
+// 	// names[1] = "d"
+// 	// names[2] = "water"
+// 	// names[3] = "law"
 
-		fmt.Println("Hello", firstName, lastName + "!","!")
-		fmt.Println(one, isFriday, twoPointTwo, say)
-		fmt.Println(pi, e, isToday, numeric, num)
-	*/
+// 	// fmt.Println(names[0], names[1], names[2], names[3])
 
-	// array
-	// var names [4]string
-	// names[0] = "trafalgar"
-	// names[1] = "d"
-	// names[2] = "water"
-	// names[3] = "law"
+// 	// var fruits = [4]string{"apple", "grape", "banana", "melon"}
+// 	// fmt.Println("Jumlah element \t\t", len(fruits))
+// 	// fmt.Println("Isi semua element \t", fruits)
 
-	// fmt.Println(names[0], names[1], names[2], names[3])
+// 	// condition(8)
+// 	// looping()
+// 	// FizzBuzz(20)
+// 	// factorial(5)
 
-	// var fruits = [4]string{"apple", "grape", "banana", "melon"}
-	// fmt.Println("Jumlah element \t\t", len(fruits))
-	// fmt.Println("Isi semua element \t", fruits)
+// 	// arrayExample()
+// 	// sliceExample()
+// 	// mapExample()
 
-	// condition(8)
-	// looping()
-	// FizzBuzz(20)
-	// factorial(5)
+// 	// printMessage("Hello", []string{"Joshua", "Van", "de", "Marston"})
 
-	// arrayExample()
-	// sliceExample()
-	// mapExample()
+// 	// fmt.Println(PersegiPanjang(2, 3))
 
-	// printMessage("Hello", []string{"Joshua", "Van", "de", "Marston"})
+// 	// fmt.Println(averageNum(2, 4, 3, 6, 4, 5, 8, 9, 1))
 
-	// fmt.Println(PersegiPanjang(2, 3))
+// 	// cara langsung
+// 	// var msg = fmt.Sprintf("Rata - rata : %.2f", averageNum(2, 3, 3, 5, 5, 4, 6, 8))
+// 	// fmt.Println(msg)
 
-	// fmt.Println(averageNum(2, 4, 3, 6, 4, 5, 8, 9, 1))
+// 	//gunakan slice untuk variadic
+// 	// numbers := []int{2, 3, 4, 6, 8, 9, 3, 1, 5, 6}
 
-	// cara langsung
-	// var msg = fmt.Sprintf("Rata - rata : %.2f", averageNum(2, 3, 3, 5, 5, 4, 6, 8))
-	// fmt.Println(msg)
+// 	// var msg = fmt.Sprintf("Rata - rata : %.2f", averageNum(numbers...))
+// 	// fmt.Println(msg)
+// 	// var hobbies = []string{"Reading", "Writing", "Running"}
+// 	// introduce("John", hobbies...)
 
-	//gunakan slice untuk variadic
-	// numbers := []int{2, 3, 4, 6, 8, 9, 3, 1, 5, 6}
+// 	// count1 := counter()
+// 	// count2 := counter()
 
-	// var msg = fmt.Sprintf("Rata - rata : %.2f", averageNum(numbers...))
-	// fmt.Println(msg)
-	// var hobbies = []string{"Reading", "Writing", "Running"}
-	// introduce("John", hobbies...)
+// 	// fmt.Println(count1())
+// 	// fmt.Println(count2())
+// 	// fmt.Println(count1())
+// 	// fmt.Println(count2())
 
-	count1 := counter()
-	count2 := counter()
-
-	fmt.Println(count1())
-	fmt.Println(count2())
-	fmt.Println(count1())
-	fmt.Println(count2())
-}
+// 	pointerExample()
+// }
 
 func FizzBuzz(point int) {
 	for i := 1; i <= point; i++ {
