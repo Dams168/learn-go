@@ -2,6 +2,19 @@ package main
 
 import "fmt"
 
+/*
+	PASS By Value vs PASS By Reference
+
+	Pass By Value adalah mekanisme dimana sebuah nilai disalin ke dalam variable baru
+	sehingga perubahan pada variable baru tidak mempengaruhi nilai asli
+
+	Pass By Reference adalah mekanisme dimana sebuah variable mereferensikan alamat memori dari nilai asli
+	sehingga perubahan pada variable tersebut akan mempengaruhi nilai asli
+
+	Di Go, secara default semua parameter pada function adalah Pass By Value
+	jika ingin menggunakan Pass By Reference, kita bisa menggunakan pointer
+*/
+
 // pointer = alamat memori dari sebuah variable
 // penting untuk menghemat penggunaan memory,
 
