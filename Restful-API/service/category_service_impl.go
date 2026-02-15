@@ -1,6 +1,7 @@
 package service
 
 import (
+	"belajar-go-restful-api/exception"
 	"belajar-go-restful-api/helper"
 	"belajar-go-restful-api/model/domain"
 	"belajar-go-restful-api/model/web"
@@ -11,12 +12,20 @@ import (
 	"github.com/go-playground/validator/v10"
 )
 
+// ini adalah implementasi dari service category
+// fungsinya untuk mengimplementasikan method-method yang sudah didefinisikan pada contract CategoryService
+// kenapa harus ada implementasi? supaya service category bisa melakukan operasi-operasi yang sudah didefinisikan pada contract CategoryService
+// jika tidak ada implementasi, maka service category tidak bisa melakukan operasi-operasi yang sudah didefinisikan pada contract CategoryService
 type CategoryServiceImpl struct {
 	CategoryRepository repository.CategoryRepository
 	DB                 *sql.DB
 	Validate           *validator.Validate
 }
 
+// fungsi untuk membuat instance dari CategoryServiceImpl
+// simplenya untuk mengembalikan pointer dari struct CategoryServiceImpl
+// kenapa harus ada fungsi ini? supaya service category bisa melakukan operasi-operasi yang sudah didefinisikan pada contract CategoryService
+// jika tidak ada fungsi ini, maka service category tidak bisa melakukan operasi-operasi yang sudah didefinisikan pada contract CategoryService
 func NewCategoryService(categoryRepository repository.CategoryRepository, DB *sql.DB, validate *validator.Validate) CategoryService {
 	return &CategoryServiceImpl{
 		CategoryRepository: categoryRepository,
@@ -52,7 +61,9 @@ func (service *CategoryServiceImpl) Update(ctx context.Context, request web.Cate
 	defer helper.CommitOrRollback(tx)
 
 	category, err := service.CategoryRepository.FindById(ctx, tx, request.Id)
-	helper.PanicIfError(err)
+	if err != nil {
+		panic(exception.NewNotFoundError(err.Error()))
+	}
 
 	category.Name = request.Name
 
@@ -67,7 +78,9 @@ func (service *CategoryServiceImpl) Delete(ctx context.Context, categoryId int) 
 	defer helper.CommitOrRollback(tx)
 
 	category, err := service.CategoryRepository.FindById(ctx, tx, categoryId)
-	helper.PanicIfError(err)
+	if err != nil {
+		panic(exception.NewNotFoundError(err.Error()))
+	}
 
 	service.CategoryRepository.Delete(ctx, tx, category)
 }
@@ -78,7 +91,9 @@ func (service *CategoryServiceImpl) FindById(ctx context.Context, categoryId int
 	defer helper.CommitOrRollback(tx)
 
 	category, err := service.CategoryRepository.FindById(ctx, tx, categoryId)
-	helper.PanicIfError(err)
+	if err != nil {
+		panic(exception.NewNotFoundError(err.Error()))
+	}
 
 	return helper.ToCategoryResponse(category)
 }
