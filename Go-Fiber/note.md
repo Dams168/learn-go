@@ -1,0 +1,9 @@
+# Go Fiber
+
+- Go Fiber adalah web framework untuk bahasa pemrograman Go yang dirancang untuk memberikan performa tinggi dan kemudahan penggunaan. Framework ini terinspirasi oleh Express.js, sebuah framework populer untuk Node.js, sehingga memiliki sintaks yang sederhana dan mudah dipahami. Go Fiber menawarkan berbagai fitur seperti routing, middleware, template engine, dan dukungan untuk WebSocket. Dengan menggunakan Go Fiber, pengembang dapat dengan cepat membangun aplikasi web yang responsif dan efisien. Framework ini juga memiliki komunitas yang aktif dan dokumentasi yang lengkap, sehingga memudahkan pengembang dalam mengembangkan aplikasi web menggunakan bahasa Go.
+
+# Pre Fork
+
+- Pre Fork adalah sebuah teknik dalam pengembangan aplikasi web yang digunakan untuk meningkatkan performa dan skalabilitas. Dalam teknik ini, aplikasi web dijalankan dalam beberapa proses yang disebut "forks" sebelum menerima permintaan dari klien. Setiap fork akan menangani permintaan secara independen, sehingga memungkinkan aplikasi untuk menangani lebih banyak permintaan secara bersamaan. Pre Fork juga dapat membantu mengurangi waktu respons dan meningkatkan kecepatan aplikasi web, karena setiap fork sudah siap untuk menangani permintaan tanpa perlu memulai ulang proses. Teknik ini sering digunakan dalam framework web seperti Go Fiber untuk meningkatkan kinerja aplikasi web yang dibangun dengan bahasa Go.
+
+- prefork ini tergantung core yang kita miliki, jika kita memiliki 4 core maka prefork akan membuat 4 proses untuk menangani permintaan, jika kita memiliki 8 core maka prefork akan membuat 8 proses untuk menangani permintaan. Prefork ini sangat berguna untuk meningkatkan performa aplikasi web yang dibangun dengan bahasa Go, karena setiap proses sudah siap untuk menangani permintaan tanpa perlu memulai ulang proses. Dengan menggunakan prefork, aplikasi web dapat menangani lebih banyak permintaan secara bersamaan dan meningkatkan kecepatan aplikasi web.
